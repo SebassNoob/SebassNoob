@@ -1,9 +1,6 @@
-function onclick(){
-  alert('hello world')  
+function mailTo(){
+  window.location.href = "mailto:sebastian.ong@hotmail.com"
   
 }
 
 
-let object= document.getElementById('mailto')
-
-object.onclick = function(){alert('hello world')};

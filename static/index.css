@@ -47,8 +47,6 @@ body{
   text-shadow: 0 0 80px rgb(192 219 255 / 35%), 
   0 0 32px rgb(65 120 255 / 24%);
   
-
-
 }
 
 
@@ -69,9 +67,9 @@ body{
   
 }
 
-.galaxy-card{
+.galaxy-card, .green-card, .tableOcontents-card{
   
-  margin: 1rem;
+  
   padding: 2px;
   height: 350px;
   width: 300px;
@@ -85,6 +83,17 @@ body{
   border-radius: 10px;
   box-shadow: 1px 1px 2px #ffffff;
   background-color: transparent;
+}
+
+.tableOcontents-card{
+  height: 550px;
+  background-image: linear-gradient(
+    60deg,
+    #fdc700 0%,
+    #5e30eb 40%,
+    #0042a9 60%,
+    #11053b 100%
+  );
 }
 
 .galaxy-card::before{
@@ -101,6 +110,29 @@ body{
   animation: picclip 30s ease-in-out infinite;
 }
 
+
+
+.green-card::before{
+  content: '';
+  background-image: url('./assets/green-shit.jpeg');
+  background-size: cover;
+  margin-left: -2px;
+  margin-top: -2px;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  filter: blur(30px);
+  z-index: -1;
+  animation: picclip 20s linear infinite;
+}
+
+
+
+.galaxy-card::hover, .green-card::hover{
+  scale:1.03;
+}
+
+
 @keyframes picclip {
   to {
     background-position: 200% center;
@@ -116,8 +148,8 @@ body{
 .btn {
   font-family: 'DM Sans', sans-serif;
   font-size: 18px;
-  padding: 12px 32px;
-  margin: 1rem;
+  padding: 6px 16px;
+  margin: 0.5rem;
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.3s ease;
@@ -125,11 +157,11 @@ body{
 }
 
 .btn:hover{
-  scale:1.1;
+  scale:1.03;
 }
 
 .btn-gradient-border {
-  color: rgba(var(--text-color));
+  color: white;
   border: 2px double transparent;
   background-image: linear-gradient(
     #000000,
@@ -138,4 +170,34 @@ body{
     #864ffe);
   background-origin: border-box;
   background-clip: padding-box, border-box;
+}
+
+#portrait{
+  height: 100px;
+  width: 80px;
+  background-color: #000000;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: white;
+  display: inline-block;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+#portrait::before{
+  content: '';
+  background-image: url('./assets/hehe.png');
+  background-size: cover;
+  /* if shifting required, use margin-x */
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+
+.contents-list{
+  font-size:18px;
+  color: #ffffff;
+  margin-top:2px;
 }
