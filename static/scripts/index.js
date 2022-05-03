@@ -82,7 +82,8 @@ function init(){
 }
 
 window.addEventListener('load', function(){
-    init();
+
+  init();
 });
 
 // minor functions begin
