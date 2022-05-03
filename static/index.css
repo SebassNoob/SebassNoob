@@ -31,7 +31,10 @@ body{
   z-index: 999;
 }
 
-
+.inner{
+  position: relative; 
+  height: auto; 
+}
 
 .text-gradient{
 
@@ -219,7 +222,7 @@ body{
 
 .egg {
   display: block;
-  
+  position: absolute;
   width: 234px;
   height: 567px;
   background-color: red;

@@ -17,6 +17,6 @@ def pg404():
 @app.errorhandler(404)
 def err404(e):
   return redirect(url_for('pg404'))
-run_app = app.run(host='0.0.0.0',port=1000)
+run_app = app.run(host='0.0.0.0',port=1111)
 while True:
   t=Thread(target= run_app).start()

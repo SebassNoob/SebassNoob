@@ -1,4 +1,6 @@
+
 // https://ihatetomatoes.net/how-to-make-page-transitions-in-html/
+
 
 function init(){
     
@@ -18,7 +20,7 @@ function init(){
         // GSAP tween to stretch the loading screen across the whole screen
         return gsap.fromTo(loader, 
             {
-                rotation: 10,
+                rotation: 20,
                 scaleX: 0,
                 xPercent: -5
             },
@@ -38,7 +40,7 @@ function init(){
             duration: 0.8, 
             scaleX: 0,
             xPercent: 5, 
-            rotation: -10, 
+            rotation: 20, 
             transformOrigin: 'right center', 
             ease: 'Power4.inOut'
         });
@@ -70,21 +72,29 @@ function init(){
     barba.init({
         transitions: [{
             async leave() {
+              
                 await loaderIn();
+                
         
             },
             enter() {
                 loaderAway();
+                //add shit here
             }
         }]
     })
 
 }
+  
+
 
 window.addEventListener('load', function(){
-
+  
   init();
+
 });
+
+
 
 // minor functions begin
 
