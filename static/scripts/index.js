@@ -1,5 +1,8 @@
 
+
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 // https://ihatetomatoes.net/how-to-make-page-transitions-in-html/
+
 
 
 function init(){
@@ -25,23 +28,24 @@ function init(){
                 xPercent: -5
             },
             { 
-                duration: 0.8,
+                duration: 1.3,
                 xPercent: 0,
                 scaleX: 1, 
                 rotation: 0,
                 ease: 'Power4.inOut', 
-                transformOrigin: 'left center'
+                transformOrigin: 'center'
             });
     }
 
-    function loaderAway() {
+    async function loaderAway() {
         // GSAP tween to hide the loading screen
+        await sleep(3000);
         return gsap.to(loader, { 
             duration: 0.8, 
             scaleX: 0,
             xPercent: 5, 
-            rotation: 20, 
-            transformOrigin: 'right center', 
+            rotation: -20, 
+            transformOrigin: 'center', 
             ease: 'Power4.inOut'
         });
     }
@@ -59,6 +63,7 @@ function init(){
 
         document.querySelector('html').classList.remove('is-transitioning');
         barba.wrapper.classList.remove('is-animating');
+        
 
     });
 
@@ -69,19 +74,30 @@ function init(){
 
     });
 
+
+
+    
     barba.init({
+        sync:false,
         transitions: [{
             async leave() {
-              
-                await loaderIn();
+
+              await loaderIn();
+
                 
         
             },
+
             enter() {
-                loaderAway();
-                //add shit here
+              
+              loaderAway();
+
+              // sleep for 1000ms to wait for webpage to load
+              //add shit here
             }
-        }]
+        }],
+      preventRunning: true
+    
     })
 
 }

@@ -21,15 +21,19 @@ body{
 
 .loader {
   position: fixed;
-  width: 100vw;
+  width: 200vw;
   height: 200vh;
   pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #000000;
-
+  margin: auto;
   visibility: hidden;
   opacity: 0;
   z-index: 999;
 }
+
 
 .inner{
   position: relative; 
@@ -228,4 +232,19 @@ body{
   background-color: red;
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   opacity:35%;
+}
+
+
+.social-icon{
+  scale:250%;
+  padding: 50px;
+
+
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.social-icon:hover{
+  opacity: 0.75;
 }
