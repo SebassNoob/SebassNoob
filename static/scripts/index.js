@@ -39,9 +39,9 @@ function init(){
 
     async function loaderAway() {
         // GSAP tween to hide the loading screen
-        await sleep(3000);
+        await sleep(500);
         return gsap.to(loader, { 
-            duration: 0.8, 
+            duration: 1.3, 
             scaleX: 0,
             xPercent: 5, 
             rotation: -20, 

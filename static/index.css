@@ -236,13 +236,15 @@ body{
 
 
 .social-icon{
-  scale:250%;
-  padding: 50px;
+  width:80px;
+  height:80px;
+  margin-top:10px;
+  padding: 20px;
 
 
   text-align: center;
   text-decoration: none;
-  border-radius: 50%;
+
 }
 
 .social-icon:hover{
