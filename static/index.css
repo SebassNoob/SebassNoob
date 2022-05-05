@@ -16,13 +16,13 @@ html,body
 }
 
 body{
-  background-color: rgb(20,20,20);
+  background-color: rgb(20,20,20) !important;
 }
 
 .loader {
   position: fixed;
-  width: 200vw;
-  height: 200vh;
+  width: 300vw;
+  height: 300vh;
   pointer-events: none;
   display: flex;
   justify-content: center;

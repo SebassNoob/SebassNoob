@@ -53,8 +53,9 @@ function init(){
     // do something before the transition starts
     barba.hooks.before(() => {
 
-        document.querySelector('html').classList.add('is-transitioning');
+                      document.querySelector('html').classList.add('is-transitioning');
         barba.wrapper.classList.add('is-animating');
+
 
     });
 
@@ -63,6 +64,8 @@ function init(){
 
         document.querySelector('html').classList.remove('is-transitioning');
         barba.wrapper.classList.remove('is-animating');
+
+      
         
 
     });
@@ -92,7 +95,6 @@ function init(){
               
               loaderAway();
 
-              // sleep for 1000ms to wait for webpage to load
               //add shit here
             }
         }],
