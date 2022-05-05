@@ -6,13 +6,39 @@ p1, p2, p3, p4, p5, p6, h1, h2, h3, h4, h5, h6{
   font-family: 'DM Sans', sans-serif;
 }
 
+html,body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
 
 body{
   background-color: rgb(20,20,20);
 }
 
+.loader {
+  position: fixed;
+  width: 200vw;
+  height: 200vh;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  margin: auto;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+}
 
 
+.inner{
+  position: relative; 
+  height: auto; 
+}
 
 .text-gradient{
 
@@ -43,12 +69,13 @@ body{
   }
 }
 
-.text-glow{
-  text-shadow: 0 0 80px rgb(192 219 255 / 35%), 
-  0 0 32px rgb(65 120 255 / 24%);
-  
+.text-glow-strong {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #d6d6d6, 0 0 40px #c2c2c2, 0 0 50px #707070, 0 0 60px #474747, 0 0 70px #333333;
 }
 
+.text-glow{
+  text-shadow: 0 0 5px #ebebeb
+}
 
 
 }
@@ -56,7 +83,8 @@ body{
 .container{
   position: relative;
   z-index: 0;
-  padding: 10px
+  padding: 10px;
+  overflow:clip;
 }
 
 .landing{
@@ -67,7 +95,7 @@ body{
   
 }
 
-.galaxy-card, .green-card, .tableOcontents-card{
+.galaxy-card, .green-card{
   
   
   padding: 2px;
@@ -85,16 +113,7 @@ body{
   background-color: transparent;
 }
 
-.tableOcontents-card{
-  height: 550px;
-  background-image: linear-gradient(
-    60deg,
-    #fdc700 0%,
-    #5e30eb 40%,
-    #0042a9 60%,
-    #11053b 100%
-  );
-}
+
 
 .galaxy-card::before{
   content: '';
@@ -196,8 +215,38 @@ body{
   position: absolute;
 }
 
-.contents-list{
-  font-size:18px;
-  color: #ffffff;
-  margin-top:2px;
+.oval {
+  width: 200px;
+  height: 100px;
+  position:absolute;
+  border-radius: 100px / 50px;
+  opacity: 35%;
+  
+}
+
+.egg {
+  display: block;
+  position: absolute;
+  width: 234px;
+  height: 567px;
+  background-color: red;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity:35%;
+}
+
+
+.social-icon{
+  width:80px;
+  height:80px;
+  margin-top:10px;
+  padding: 20px;
+
+
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.social-icon:hover{
+  opacity: 0.75;
 }

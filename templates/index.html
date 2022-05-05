@@ -4,23 +4,25 @@
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="static/index.css" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="static/scripts/index.js" ></script>
+  
   <title>SebassNoob's profile</title>
   
 </head>
-<body>
-  {% include 'navbar.html' %}
-
-
-  <div>
-    
+<body data-barba="wrapper">
   
-    <div class="container">
+
+
+  <div class="loader">
+  </div>
+
+  <div data-barba="container">    
+    {% include 'navbar.html' %}
+    <div class="inner">
+    <div class="container" style="postion:absolute">
       <div class="landing" >
-        <h3 class="text-gradient" style="font-size:75px;">Hi there!</h3>
+        <h3 class="text-gradient" style="font-size:75px;margin-top:40px">Hi there!</h3>
         <br>
-        <p1 class="text-glow" style="font-size:25px; white-space:pre;">I'm <span class='text-gradient'>Sebastian Ong</span>, a beginner in web development 
+        <p1 style="font-size:25px; white-space:pre;">I'm <span class='text-gradient'>Sebastian Ong</span>, a beginner in web development 
 and a terrible student in Secondary 4.</p1>
       </div>
       <!-- dont touch or positioning will break-->
@@ -28,18 +30,18 @@ and a terrible student in Secondary 4.</p1>
       
       
       <div class="galaxy-card" style="margin-top:250px; margin-left:-50px">
-        <p1 class="text-glow" style="font-size:25px; color:#eeee50;"><center><strong>Details</strong></center></p1>    
+        <p1 style="font-size:25px; color:#eeee50;"><center><strong>Details</strong></center></p1>    
         <div id="portrait" style="margin-left: 175px; margin-top: 20px">
         
         </div>
         <div>
-          <p1 class="text-glow details"><strong>Name: </strong><br>&nbspSebastian Ong</p1>
+          <p1 class="details"><strong>Name: </strong><br>&nbspSebastian Ong</p1>
           <br>
-          <p1 class= "text-glow details"><strong>Age: </strong><br>&nbsp16</p1>
+          <p1 class= " details"><strong>Age: </strong><br>&nbsp16</p1>
           <br>
-          <p1 class="text-glow details"><strong>Location:</strong> <br>&nbspClementi, Singapore</p1>
+          <p1 class=" details"><strong>Location:</strong> <br>&nbspClementi, Singapore</p1>
           <br>
-          <p1 class="text-glow details"> Email: <span style="color:#eeee10; font-size:16px"><u>sebastian.ong@hotmail.com</u></span></p1>
+          <p1 class="details"> Email: <span style="color:#eeee10; font-size:16px"><u>sebastian.ong@hotmail.com</u></span></p1>
 
           <br>
           <button class="btn btn-gradient-border" style="scale:0.75;" id="mailto" onclick="mailTo()">Email Me</button>
@@ -47,28 +49,51 @@ and a terrible student in Secondary 4.</p1>
       </div>
 
       <div class="green-card" style="margin-top:250px; margin-left:300px">
-        <p class= "text-glow">About me</p>
+        <p1 style="font-size:25px; color:#eeee50;"><center><strong>About me</strong></center></p1> 
+        <p1 class="details"></p1>
       </div>
+      <!-- designs -->
+
+
+
+
       
-      <div class="tableOcontents-card" style="margin-top:50px; margin-left:650px">
-        <p1 class= "text-glow" style="font-size:25px; color:#eeee50; margin: 7px"><center><strong>Table of contents</strong></center></p1>
-        <ul>
-          <li><a href="#" class="contents-list">Experiences & Education</a></li>
-          <li><a href="#" class="contents-list">Abilities</a></li>
-          <li><a href="#" class="contents-list">Examples of Works</a></li>
-          <li><a href="#" class="contents-list">Hobbies & Interests</a></li>
-          <li><a href="#" class="contents-list">Follow Me!</a></li>
-          
-        </ul>
-       
+      <div class="container" style="margin-top:0px; margin-left:650px; overflow:clip">
         
-      </div>  
+          
+        
+        <div class="egg" style="scale:0.5; background:pink; margin-top:100px; height:280px;width:215px; margin-left:-200px; rotate: 240deg;z-index:-3">
+          
+        </div>
+        <div class="oval" style="scale:1.6; background:lightseagreen; margin-top:260px; margin-right:-70px; rotate:58deg"></div>
+        <div class="egg" style="scale:0.7; background:red; margin-top:260px; margin-right:-70px; rotate:58deg">
+          
+        </div>
+        <div class="oval" style="scale:1.3; background:green; margin-top:150px; height:300px; margin-right: -700px;margin-left:30px; rotate: 110deg;z-index:-3">
+          
+        </div>
+
+        <div class="egg" style="scale:1.7; background:yellow; margin-top:-90px; height:240px; margin-right: -700px;margin-left:30px; rotate: 240deg;z-index:-3">
+          
+        </div>
+
+        
+      </div>
+
     </div>
-      
-  
+
+
     
-    
+    </div>
+    <div style="margin-top:700px">
+    {% include 'footer.html' %}
+    </div>
   </div>
   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="static/scripts/index.js" ></script>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+
   
 </body>
