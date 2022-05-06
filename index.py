@@ -10,9 +10,22 @@ def index():
 def exp_edu():
   return render_template('exp_edu.html')
 
+
+
+@app.route('/eg')
+def eg():
+  return render_template('eg.html')
+
+@app.route('/hobbies')
+def hobbies():
+  return render_template('hobbies.html')
+  
+
 @app.route('/404')
 def pg404():
   return render_template('err404.html')
+
+
 
 @app.errorhandler(404)
 def err404(e):
