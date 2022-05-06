@@ -1,6 +1,30 @@
 
 
-const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+
+function navbar_active(){
+  try{
+  let path= window.location.pathname;
+  let lis = document.getElementById("nav-content").getElementsByTagName("li");
+  
+  for (let i=0; i<lis.length ; i++ ){
+    let selected_a = lis[i].children[0];
+    if (selected_a.pathname.toString() == path.toString()){
+      selected_a.classList.add('disabled')
+      selected_a.classList.add('active');
+    }
+    else{
+      
+      selected_a.classList.remove('active');
+    }
+    
+  }
+  } catch(e){
+    alert(e)
+  }
+}
+
+
 // https://ihatetomatoes.net/how-to-make-page-transitions-in-html/
 
 
@@ -28,7 +52,7 @@ function init(){
                 xPercent: -5
             },
             { 
-                duration: 1.3,
+                duration: 0.3,
                 xPercent: 0,
                 scaleX: 1, 
                 rotation: 0,
@@ -41,7 +65,7 @@ function init(){
         // GSAP tween to hide the loading screen
         await sleep(500);
         return gsap.to(loader, { 
-            duration: 1.3, 
+            duration: 0.3, 
             scaleX: 0,
             xPercent: 5, 
             rotation: -20, 
@@ -64,6 +88,9 @@ function init(){
 
         document.querySelector('html').classList.remove('is-transitioning');
         barba.wrapper.classList.remove('is-animating');
+      navbar_active();
+      
+      
 
       
         
@@ -92,7 +119,7 @@ function init(){
             },
 
             enter() {
-              
+
               loaderAway();
 
               //add shit here
@@ -107,7 +134,7 @@ function init(){
 
 
 window.addEventListener('load', function(){
-  
+  navbar_active();
   init();
 
 });
