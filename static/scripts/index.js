@@ -2,25 +2,26 @@
 
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 
+//controls which nav-pills are active and inactive based on pathname
 function navbar_active(){
   try{
-  let path= window.location.pathname;
-  let lis = document.getElementById("nav-content").getElementsByTagName("li");
+    let path= window.location.pathname;
+    let lis = document.getElementById("nav-content").getElementsByTagName("li");
   
-  for (let i=0; i<lis.length ; i++ ){
-    let selected_a = lis[i].children[0];
-    if (selected_a.pathname.toString() == path.toString()){
-      selected_a.classList.add('disabled')
-      selected_a.classList.add('active');
-    }
-    else{
+    for (let i=0; i<lis.length ; i++ ){
+      let selected_a = lis[i].children[0];
+      if (selected_a.pathname.toString() == path.toString()){
+        selected_a.classList.add('disabled');
+        selected_a.classList.add('active');
+      }
+      else{
       
-      selected_a.classList.remove('active');
-    }
+        selected_a.classList.remove('active');
+      }
     
-  }
+    }
   } catch(e){
-    alert(e)
+    console.log(e)
   }
 }
 
