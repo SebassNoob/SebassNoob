@@ -1,0 +1,14 @@
+html:
+- templates/*
+
+js:
+- any: ['static/scripts/*.js']
+
+css:
+- any: ['static/**/*.css']
+
+backend:
+- any: ['*.py']
+
+readme:
+- README.md
