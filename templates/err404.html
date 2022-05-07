@@ -13,22 +13,25 @@
     
     
     <div class="loader"></div>
-
+    
     <div data-barba="container">
-      {% include 'navbar.html' %}
-      <h1 id="text404">404 Not Found</h1>
-      <h3 id="explanation" style="margin: 20px;">The page you were looking for does not exist. You should probably leave now… </h3>
-      <a href='/' style="color:yellow; margin-left:20px"><u>Leave quietly</u></a>
-      <br>
       
-      <center><img src="static/assets/monster.jpeg" id="monster" style="scale:0.8;"></center>
+      {% include 'navbar.html' %}
+      <img src="static/assets/empty-room.webp" class="background"></img>
+      <h1 id="text404">404 - Page Not Found</h1>
+      <h3 id="explanation" style="margin: 20px;">You are lost in a strange room. You should probably <span id="shake">leave now…</span> </h3>
+      <a href='/' style="color:yellow; margin-left:20px"><u>Go home safely.</u></a>
+      <br>
+
+      <div style="margin-top:100px">
+    {% include 'footer.html' %}
     </div>
 
+    </div>
     
-
     
 
     <script src="https://unpkg.com/@barba/core"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha384-SzzIsV7QsIVbpk86WEy+qc86Qg3q9L0uzQnyvd6Nrhg5EBLtJDo5Wp17FkZTboRt" crossorigin="anonymous"></script>
     <script src="static/scripts/index.js" defer></script>
 </body>
