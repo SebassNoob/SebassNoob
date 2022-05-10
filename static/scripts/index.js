@@ -34,9 +34,29 @@ function reloadCss()
     {
         var link = links[cl];
         if (link.rel === "stylesheet")
+            
             link.href += "";
     }
 }
+
+function removeCss()
+{
+    let links = document.getElementsByTagName("link");
+    for (var cl in links)
+    {
+      
+        var link = links[cl];
+
+        if (link.rel === "stylesheet"){
+
+
+          document.getElementsByTagName("head")[0].removeChild(link);          
+        }
+            
+    }
+}
+
+
 
 
 // https://ihatetomatoes.net/how-to-make-page-transitions-in-html/
@@ -119,7 +139,11 @@ function init(){
 
     });
 
-    
+    barba.hooks.beforeEnter(()=>{
+      
+      removeCss();
+      
+    });
 
     
     barba.init({
