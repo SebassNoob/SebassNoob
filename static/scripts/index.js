@@ -26,6 +26,39 @@ function navbar_active(){
 }
 
 
+//Stack Overflow code that is now MINE!!
+function reloadCss()
+{
+    let links = document.getElementsByTagName("link");
+    for (var cl in links)
+    {
+        var link = links[cl];
+        if (link.rel === "stylesheet")
+            
+            link.href += "";
+    }
+}
+
+function removeCss()
+{
+    let links = document.getElementsByTagName("link");
+    for (var cl in links)
+    {
+      
+        var link = links[cl];
+
+        if (link.rel === "stylesheet"){
+
+
+          document.getElementsByTagName("head")[0].removeChild(link);          
+        }
+            
+    }
+}
+
+
+
+
 // https://ihatetomatoes.net/how-to-make-page-transitions-in-html/
 
 
@@ -62,11 +95,11 @@ function init(){
             });
     }
 
-    async function loaderAway() {
+    function loaderAway() {
         // GSAP tween to hide the loading screen
-        await sleep(500);
+
         return gsap.to(loader, { 
-            duration: 0.3, 
+            duration: 0.5,
             scaleX: 0,
             xPercent: 5, 
             rotation: -20, 
@@ -89,6 +122,7 @@ function init(){
 
         document.querySelector('html').classList.remove('is-transitioning');
         barba.wrapper.classList.remove('is-animating');
+      //exp_edu.css hates loading
       navbar_active();
       
       
@@ -99,13 +133,17 @@ function init(){
     });
 
     // scroll to the top of the page
-    barba.hooks.enter(() => {
-
+    barba.hooks.enter(async () => {
+        await sleep(500);
         window.scrollTo(0, 0);
 
     });
 
-
+    barba.hooks.beforeEnter(()=>{
+      
+      removeCss();
+      
+    });
 
     
     barba.init({
@@ -122,7 +160,19 @@ function init(){
             enter() {
 
               loaderAway();
+              
+              //for some reason exp_edu.css DOES NOT want to load on transition 
+              //so here is a manual check
 
+              if (window.location.pathname === '/exp_edu'){
+
+            let link = document.createElement("link");
+            link.setAttribute("rel", "stylesheet");
+            link.setAttribute("href", "static/exp_edu.css");
+            document.getElementsByTagName("head")[0].appendChild(link);
+
+              }
+              reloadCss();
               //add shit here
             }
         }],
@@ -135,9 +185,10 @@ function init(){
 
 
 window.addEventListener('load', function(){
+  
   navbar_active();
   init();
-
+  reloadCss();
 });
 
 
