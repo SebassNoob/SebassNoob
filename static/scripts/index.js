@@ -57,6 +57,20 @@ function removeCss()
 }
 
 
+//for some reason exp_edu.css DOES NOT want to load on transition 
+//so here is a manual check              
+function manualCheckForSkills(){
+              if (window.location.pathname === '/exp_edu'){
+
+            let link = document.createElement("link");
+            link.setAttribute("rel", "stylesheet");
+            link.setAttribute("href", "static/exp_edu.css");
+            document.getElementsByTagName("head")[0].appendChild(link);
+
+
+              }
+}
+
 
 
 // https://ihatetomatoes.net/how-to-make-page-transitions-in-html/
@@ -122,7 +136,7 @@ function init(){
 
         document.querySelector('html').classList.remove('is-transitioning');
         barba.wrapper.classList.remove('is-animating');
-      //exp_edu.css hates loading
+
       navbar_active();
       
       
@@ -142,6 +156,7 @@ function init(){
     barba.hooks.beforeEnter(()=>{
       
       removeCss();
+      manualCheckForSkills();
       
     });
 
@@ -163,32 +178,37 @@ function init(){
               
               //for some reason exp_edu.css DOES NOT want to load on transition 
               //so here is a manual check
-
-              if (window.location.pathname === '/exp_edu'){
-
-            let link = document.createElement("link");
-            link.setAttribute("rel", "stylesheet");
-            link.setAttribute("href", "static/exp_edu.css");
-            document.getElementsByTagName("head")[0].appendChild(link);
-
-              }
+              manualCheckForSkills();
               reloadCss();
               //add shit here
             }
         }],
-      preventRunning: true
+
     
     })
 
 }
-  
+
+
 
 
 window.addEventListener('load', function(){
   
-  navbar_active();
+  
+  
+  //for some reason exp_edu.css DOES NOT want to load on transition 
+              //so here is a manual check
+  
   init();
-  reloadCss();
+  window.scrollTo(0,0);
+  navbar_active();
+  
+
+  manualCheckForSkills();
+
+  
+  
+  
 });
 
 

@@ -72,16 +72,16 @@
 
         </section>
         <section>
-      <div class="job-section grid-container" style="margin-top: 30px;">
+      <div class="job-section grid-container" style="margin-top: 30px; height:700px">
         
         <div style="grid-area:right"><h1>Job Experiences</h1></div>
         <br>
         <div style="grid-area:main" cless="inner" >
-          <div class="green-card " style="position:relative; margin-left:-340px; background-image: '';">
+          <div class="job-card " style="position:relative; margin-left:-340px; background-image: '';">
         <p1 style="font-size:25px; color:#000000;"><center><strong>Placeholder 1</strong></center></p1> 
         <p1 class="details"></p1>
       </div>
-        <div class="green-card " style="position:relative; margin-left:-680px; margin-top:-500px; background-image: '';">
+        <div class="job-card " style="position:relative; margin-left:-680px; margin-top:-500px; background-image: '';">
         <p1 style="font-size:25px; color:#000000;"><center><strong>Placeholder 1</strong></center></p1> 
         <p1 class="details"></p1>
       </div>
@@ -138,14 +138,19 @@
 
     </div>
     
-
+    <script>
+      let link = document.createElement("link");
+            link.setAttribute("rel", "stylesheet");
+            link.setAttribute("href", "static/exp_edu.css");
+            document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
 
     
     
 
     <script async src="https://unpkg.com/@barba/core"></script>
    
-    <script async src="static/scripts/index.js" defer>
+    <script async src="static/scripts/index.js" >
     
       </script>
      <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha384-SzzIsV7QsIVbpk86WEy+qc86Qg3q9L0uzQnyvd6Nrhg5EBLtJDo5Wp17FkZTboRt" crossorigin="anonymous"></script>

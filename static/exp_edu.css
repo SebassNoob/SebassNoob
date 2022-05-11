@@ -127,3 +127,32 @@ body{
   grid-template-columns: auto auto auto;
   padding: 10px;
 }
+
+.job-card{
+  padding: 2px;
+  height: 350px;
+  width: 300px;
+
+  color: black;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: gray;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px #ffffff;
+  background-color: transparent;
+}
+
+.job-card::after{
+  content: '';
+  background-size: cover;
+  margin-left: -2px;
+  margin-top: -2px;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+
+
+
+}
