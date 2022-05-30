@@ -16,10 +16,11 @@
     
     <div data-barba="container">
       {% include 'navbar.html' %}
-      <div class="container">
+      <div class="flex-container container">
         <!-- will style later-->
-        <section>
-        <div class='education-section'>
+        <span>
+<div class='inner'><div id='education-section'></div></div>
+          <div id='edu-content'>
         <h1 class="text-glow subheading">Education</h1>
           
         <img src="static/assets/quot-open.svg" class="quot-svg">
@@ -67,37 +68,36 @@
           
           </div>
       </div>
+        </h1>
+          </div>
 
-        </div>
 
-        </section>
-        <section>
+        </span>
+        <span>
+        <div style="margin-left:30%" class='text-glow'><h1>Job Experiences</h1></div>
+      <div class="job-section flex-container" style="margin-top: 30px; height:1300px">
         
-      <div class="job-section grid-container" style="margin-top: 30px; height:1300px">
-        
-        <div style="grid-area:right; margin-left:30%"><h1>Job Experiences</h1></div>
-        <br>
-        <div style="grid-area:main" class="inner" >
+
           <div class="job-card " style="position:relative; margin-left:-55%; background-image: '';">
-        <p1 style="font-size:25px; color:#000000;"><center><strong>Placeholder 1</strong></center></p1> 
+        <p1 style="font-size:25px; color:#000000;"><center><strong>Placeholder 2</strong></center></p1> 
         <p1 class="details"></p1>
       </div>
         <div class="job-card " style="position:relative; margin-left:-55%; margin-top:-800px; background-image: '';">
-        <p1 style="font-size:25px; color:#000000;"><center><strong>Placeholder 2</strong></center></p1> 
+        <p1 style="font-size:25px; color:#000000;"><center><strong>Placeholder 1</strong></center></p1> 
         <p1 class="details"></p1>
       </div>
         </div>
         <br>  
       </div>
-        </section>
-        <section>
+        </span>
+        <span>
 
         <div class="abilities-section" >
-        <div style="margin-left:250px">
-        <div id="abilities-title">
+        <div style="margin-left:250px; margin-top:-20px">
+        <div class='text-glow'>
         <h1>Abilities</h1>
         </div>
-        <div style="grid-area:b;">
+        <div>
         <p1 >Languages (real life)</p1>
         <ul>
           <li>English</li>
@@ -106,7 +106,7 @@
         
         </ul>
         </div>
-        <div style="grid-area:c;">
+        <div>
         <p1 >Languages (programming)</p1>
         <dl>
           <dt>Python</dt>
@@ -139,7 +139,7 @@
         </div>
         </div>
         </div>
-          </section>
+        </span>
       </div>
     
       <div style="margin-top:700px">

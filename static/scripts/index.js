@@ -205,13 +205,15 @@ window.addEventListener('load', function(){
   
 
   manualCheckForSkills();
-
+  urMomGae();
   
   
   
 });
 
-
+window.addEventListener('resize', ()=>{
+    urMomGae();
+});
 
 // minor functions begin
 
@@ -222,4 +224,17 @@ function mailTo(){
   
 }
 
+function heightGenerator(elementId){
+  const fuckyou = document.getElementById(elementId);
+
+  return fuckyou.offsetHeight+'px'
+}
+
+//calcs height of sections in exp_edu
+function urMomGae(){
+  
+  document.getElementById('education-section').style.height = heightGenerator('edu-content');
+
+  
+}
 
