@@ -206,6 +206,7 @@ window.addEventListener('load', function(){
 
   manualCheckForSkills();
   urMomGae();
+  console.log('page loaded!')
   
   
   
@@ -226,15 +227,17 @@ function mailTo(){
 
 function heightGenerator(elementId){
   const fuckyou = document.getElementById(elementId);
-
-  return fuckyou.offsetHeight+'px'
+  return fuckyou.offsetHeight
 }
 
 //calcs height of sections in exp_edu
 function urMomGae(){
   
-  document.getElementById('education-section').style.height = heightGenerator('edu-content');
-
+  document.getElementById('education-section').style.height = heightGenerator('edu-content')+'px';
+  document.getElementById('job-section').style.height = heightGenerator('edu-content')+'px';
+  document.getElementById('abilities-section').style.height = (heightGenerator('abilities-content')+100)+'px';
+  
+  
   
 }
 

@@ -101,6 +101,8 @@ body{
 
 
 
+
+
 #education-section{
   background-image: linear-gradient(
     30deg,
@@ -109,16 +111,19 @@ body{
     
   );
 
-  overflow:visible;
-  margin-left:-100px;
-  position:absolute;
-  width:100vw;
 
-  z-index:-3;
-  
+ 
+  height:600px;
+  overflow:visible;
+  position: absolute;
+  width:300vw;
+  margin-left:-100%;
+  z-index: -3;
+  padding: 10px;
+  align-items: center;
 }
 
-.job-section{
+#job-section{
   background-image: linear-gradient(
     140deg,
     #7a219e 0%,
@@ -127,8 +132,14 @@ body{
   );
 
 
-  position: relative;
-
+  height:600px;
+  overflow:visible;
+  position: absolute;
+  width:300vw;
+  margin-left:-100%;
+  z-index: -3;
+  
+  align-items: center;
 
   
 }
@@ -147,7 +158,9 @@ body{
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: relative;
+  padding:10px;
+  margin: 30px;
   background-color: gray;
   border-radius: 10px;
   box-shadow: 1px 1px 2px #ffffff;
@@ -161,27 +174,25 @@ body{
   margin-top: -2px;
   height: 500px;
   width: 500px;
-  position: absolute;
+  position: relative;
   
 }
 
-.abilities-section{
-  margin-left:-30px;
-  margin-top: 20px;
-  width:120vw;
-  height:600px;
-  overflow:visible;
+#abilities-section{
+
   background-image: linear-gradient(
     -50deg,
     #e63b7a 0%,
     #7a219e 100%
   );
-  width:150vw;
+  height:600px;
   overflow:visible;
-  margin-left:-200px;
-
+  position: absolute;
+  width:300vw;
+  margin-left:-100%;
+  z-index: -3;
   padding: 10px;
-  
+  align-items: center;
  
   
 }
