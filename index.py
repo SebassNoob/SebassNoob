@@ -6,7 +6,7 @@ import sys
 #defines constants from cmd line
 
 if len(sys.argv) >=2: PORT = sys.argv[1]
-else: PORT = 6969
+else: PORT = 6969 #haha funny number
 
 if len(sys.argv) >=3: DEBUG=sys.argv[2]
 else: DEBUG=False
@@ -37,7 +37,11 @@ def main():
   @app.route('/404')
   def pg404():
     return render_template('err404.html')
-  
+
+
+  @app.route('/about')
+  def about():
+    return render_template('about.html')
   
   
   @app.errorhandler(404)
@@ -45,7 +49,7 @@ def main():
     return redirect(url_for('pg404'))
   
   
-  
+
     
   run_app = app.run(host='0.0.0.0',port= PORT, debug= DEBUG)
   
