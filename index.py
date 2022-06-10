@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
 from threading import Thread
 import sys
 
@@ -25,9 +25,19 @@ def main():
   
   
   
-  @app.route('/eg')
+  @app.route('/eg', methods = ['GET'])
   def eg():
+    #a,b,c are placeholders for individual articles.
+    #/eg?pageid=int returns the article html
+#uncomment when ready
+    
+    #if request.method == 'GET':
+      #pageid = request.args.get('pageid')
+      #switch = {0:'a',1:'b',2:'c'}
+      #return render_template(switch.get(pageid,'a'))
+
     return render_template('eg.html')
+    #to be removed
   
   @app.route('/hobbies')
   def hobbies():
