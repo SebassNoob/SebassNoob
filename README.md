@@ -3,10 +3,10 @@
 
 - IRL name: Sebastian Ong (王哲轩）
 - Location: Clementi, Singapore
-- I'm a secondary 4 student who loves/ hates (sometimes) programming
+- I'm a JC1 student who loves/ hates (sometimes) programming
 
 
-- Programming Languages: Python, Javascript, HTML, CSS
+- Programming Languages: Python, Javascript, Java (+html, css)
 
 [![SebassNoob's GitHub stats](https://github-readme-stats.vercel.app/api?username=SebassNoob&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
@@ -24,14 +24,4 @@ About me:
 
 <hr>
 
-Website/e-portfolio:
-https://sebassnoob.repl.co 
-
-Website status:
-- Currently under constuction
-- UP: hosted with [replit](https://replit.com)
-- Source code can be found in [this repo](https://github.com/SebassNoob/SebassNoob)
-
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/SebassNoob/SebassNoob.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/SebassNoob/SebassNoob/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/SebassNoob/SebassNoob.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/SebassNoob/SebassNoob/context:javascript)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/SebassNoob/SebassNoob.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/SebassNoob/SebassNoob/context:python)
+no motivation to update personal site lol
