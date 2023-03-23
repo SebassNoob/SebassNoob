@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
 <head>
+  <link rel="apple-touch-icon" sizes="180x180" href="static/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="static/site.webmanifest">
   
   <link rel="stylesheet" href="static/exp_edu.css" type="text/css">
   <link rel="stylesheet" href="static/index.css" type="text/css">
@@ -16,10 +20,13 @@
     
     <div data-barba="container">
       {% include 'navbar.html' %}
-      <div class="container">
+      <div class="flex-container container">
         <!-- will style later-->
-        <section>
-        <div class='education-section'>
+        
+
+        <span>
+<div class='inner'><div id='education-section'></div></div>
+          <div id='edu-content'>
         <h1 class="text-glow subheading">Education</h1>
           
         <img src="static/assets/quot-open.svg" class="quot-svg">
@@ -67,39 +74,51 @@
           
           </div>
       </div>
+        </h1>
+          </div>
 
-        </div>
 
-        </section>
-        <section>
-      <div class="job-section grid-container" style="margin-top: 30px;">
+        </span>
+        <span>
+          <div class='inner'><div id='job-section'></div></div>
+        <div style="margin-left:30%; margin-top: 40px;" class='text-glow'><h1>Job Experiences</h1></div>
         
-        <div style="grid-area:right"><h1>Job Experiences</h1></div>
-        <br>
-        <div style="grid-area:main" cless="inner" >
-          <div class="green-card " style="position:relative; margin-left:-340px; background-image: '';">
-        <p1 style="font-size:25px; color:#000000;"><center><strong>Placeholder 1</strong></center></p1> 
+        
+        <div class = "inner">
+        <div class="job-card " style=" background-image: '';">
+        <p1 style="font-size:25px; color:#000000;"><center><strong>Placeholder 2</strong></center></p1> 
         <p1 class="details"></p1>
       </div>
-        <div class="green-card " style="position:relative; margin-left:-680px; margin-top:-500px; background-image: '';">
+    </div>
+    <div class="inner">
+        <div class="job-card " style=" background-image: '';">
         <p1 style="font-size:25px; color:#000000;"><center><strong>Placeholder 1</strong></center></p1> 
         <p1 class="details"></p1>
       </div>
         </div>
-        <br>  
-      </div>
-        </section>
-        <section>
-        <h1>Abilities</h1>
-        <br>
-        <p1>Languages (real life)</p1>
+          
+      
+        </span>
+        <span>
+
+        <div class="inner" ><div id="abilities-section" ></div></div>
+
+        <div id="abilities-content">
+
+        <div class='text-glow'>
+        <h1 style="margin-top:40px">Abilities</h1>
+        </div>
+        <div>
+        <p1 >Languages (real life)</p1>
         <ul>
           <li>English</li>
           <li>Mandarin Chinese</li>
           <li>Malay (Bahasa Melayu)</li>
         
         </ul>
-        <p1>Languages (programming)</p1>
+        </div>
+        <div>
+        <p1 >Languages (programming)</p1>
         <dl>
           <dt>Python</dt>
           <dd>I have experience in the following libraries:
@@ -111,7 +130,7 @@
           </dd>
           <dt>Javascript</dt>
           <dd>
-            I really am a beginner in this language. All I know is basic synchronous programming, with some knowledge on:
+            I have knowledge of:
             <ul>
               <li><a href="https://barbajs.org">BarbaJS</a></li>
               <li><a href="https://expressjs.com">ExpressJS</a></li>
@@ -119,33 +138,43 @@
           </dd>
           <dt>HTML and CSS</dt>
           <dd>
-            I know most syntax in HTML and CSS. Libraries used:
+            I know most syntax in HTML and CSS. Libraries I've used before:
             <ul>
               <li><a href="https://www.bootstrapcdn.com">Bootstrap</a></li>
-              <li>That's it...</li>
+
             </ul>
             
           </dd>
           
         </dl>
-          </section>
+        </div>
+        </div>
+        
+        </span>
       </div>
-    
-      <div style="margin-top:700px">
+       <div style="margin-top:200px">
     {% include 'footer.html' %}
       
     </div>
+      </div>
+    
+     
 
     </div>
     
-
+    <script>
+      let link = document.createElement("link");
+            link.setAttribute("rel", "stylesheet");
+            link.setAttribute("href", "static/exp_edu.css");
+            document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
 
     
     
 
     <script async src="https://unpkg.com/@barba/core"></script>
    
-    <script async src="static/scripts/index.js" defer>
+    <script async src="static/scripts/index.js" >
     
       </script>
      <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha384-SzzIsV7QsIVbpk86WEy+qc86Qg3q9L0uzQnyvd6Nrhg5EBLtJDo5Wp17FkZTboRt" crossorigin="anonymous"></script>
