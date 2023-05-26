@@ -1,95 +1,83 @@
+"use client"
 import Image from 'next/image'
+import './globals.css'
 import styles from './page.module.css'
 
+import React, { useState, useEffect } from 'react'
+
+const Navbar = () => {
+  return(
+    <div className={`${styles.navbar}`}>
+      <ul>
+        <li>hello</li>
+      </ul>
+    </div>
+  )
+  
+}
+
 export default function Home() {
+  useEffect(() => {
+    const navbar = document.querySelector(`.${styles.navbar}`);
+    
+    const parallax_images = document.querySelectorAll(`.${styles.parallaxImg}`);
+    const grand_canyon = document.querySelector(`#grand_canyon`);
+    
+    let offsets = [0];
+    parallax_images.forEach((parallax, idx) => {
+      offsets.push(parallax.offsetHeight+ offsets.reduce((a, b) => a + b, 0));
+      parallax.style.transform = `translateY(${offsets[idx]}px)`;
+    });
+
+    
+    let sticky = navbar.offsetTop;
+    window.addEventListener('scroll', () =>{
+      
+      let scrollY =  window.pageYOffset ;
+      
+      
+
+      parallax_images.forEach((parallax, idx) => {
+        
+        parallax.style.transform = `translateY(${(scrollY * 0.4) + offsets[idx]}px)`;
+      });
+      
+      
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add(`${styles.sticky}`);
+
+      } else {
+        navbar.classList.remove(`${styles.sticky}`);
+      }
+    });
+  });
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <>
+      
+      <section className={styles.parallaxImgContainer}>
+        
+        <Image 
+          id="grand_canyon"
+          className={styles.parallaxImg}
+          src="/grand_canyon.jpg" 
+          fill={true} 
+          
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        
+        <p className={styles.name}>SebassNoob</p>
+        
+      </section>
+      <section className={styles.main}>
+        <Navbar />
+        <Image 
+          
+          className={styles.parallaxImg}
+          src="/next.svg" 
+          fill={true} 
+          
+        />  
+      </section>
+    </>
   )
 }
