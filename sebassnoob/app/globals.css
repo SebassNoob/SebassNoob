@@ -1,8 +1,9 @@
 :root{
-  --colour-primary: #7395ae;
-  --colour-secondary: #b1a296;
+
+  --colour-primary: #2e77cb ;
+  --colour-secondary: #4cbfa6;
   --colour-tertiary: #5d5c61;
-  
+  --nav-sizing: 12vh;
 }
 
 body{
@@ -10,4 +11,5 @@ body{
   padding:0;
   font-family: Verdana, sans-serif;
   overflow-x: hidden;
+  background-color: #000000;
 }

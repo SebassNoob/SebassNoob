@@ -1,83 +1,92 @@
 "use client"
 import Image from 'next/image'
 import './globals.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { faAddressCard, faCode, faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import styles from './page.module.css'
 
 import React, { useState, useEffect } from 'react'
 
 const Navbar = () => {
+
+  
   return(
-    <div className={`${styles.navbar}`}>
-      <ul>
-        <li>hello</li>
-      </ul>
+    <div>
+      <nav>
+        <ul className={`${styles.navbar}`}>
+          <li>
+            <div className={styles.nav_content}>
+              <span>
+                <FontAwesomeIcon icon={faAddressCard} className={styles.nav_icon}/>
+              </span>
+              
+              <span>
+                <a className={styles.nav_text} href="#about">About</a>
+              </span>
+            </div>
+           
+            
+          </li>
+          <li>
+            <div className={styles.nav_content}>
+              <span>
+                <FontAwesomeIcon icon={faCode} className={styles.nav_icon}/>
+              </span>
+              
+              <span>
+                <a className={styles.nav_text} href="#projects">Projects</a>
+              </span>
+            </div>
+           
+            
+          </li>
+          <li>
+            <div className={styles.nav_content}>
+              <span>
+                <FontAwesomeIcon icon={faBookOpen} className={styles.nav_icon}/>
+              </span>
+              
+              <span>
+                
+                <a className={styles.nav_text} href="#exp_edu">Experiences</a>
+              </span>
+            </div>
+           
+            
+          </li>
+          
+          
+        </ul>
+        
+      </nav>
     </div>
   )
   
 }
 
 export default function Home() {
-  useEffect(() => {
-    const navbar = document.querySelector(`.${styles.navbar}`);
-    
-    const parallax_images = document.querySelectorAll(`.${styles.parallaxImg}`);
-    const grand_canyon = document.querySelector(`#grand_canyon`);
-    
-    let offsets = [0];
-    parallax_images.forEach((parallax, idx) => {
-      offsets.push(parallax.offsetHeight+ offsets.reduce((a, b) => a + b, 0));
-      parallax.style.transform = `translateY(${offsets[idx]}px)`;
-    });
-
-    
-    let sticky = navbar.offsetTop;
-    window.addEventListener('scroll', () =>{
-      
-      let scrollY =  window.pageYOffset ;
-      
-      
-
-      parallax_images.forEach((parallax, idx) => {
-        
-        parallax.style.transform = `translateY(${(scrollY * 0.4) + offsets[idx]}px)`;
-      });
-      
-      
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add(`${styles.sticky}`);
-
-      } else {
-        navbar.classList.remove(`${styles.sticky}`);
-      }
-    });
-  });
+  
 
   return (
     <>
+      <Navbar />
+      <div className={styles.title}>
+
+      </div>
+      <div className={styles.about} id="about">
       
-      <section className={styles.parallaxImgContainer}>
+      </div>
+      <div className={styles.exp_edu} id="exp_edu">
+
+      </div>
+      <div className={styles.projects} id="projects">
+
+      </div>
         
-        <Image 
-          id="grand_canyon"
-          className={styles.parallaxImg}
-          src="/grand_canyon.jpg" 
-          fill={true} 
-          
-        />
         
-        <p className={styles.name}>SebassNoob</p>
-        
-      </section>
-      <section className={styles.main}>
-        <Navbar />
-        <Image 
-          
-          className={styles.parallaxImg}
-          src="/next.svg" 
-          fill={true} 
-          
-        />  
-      </section>
+      
+      
     </>
   )
 }
