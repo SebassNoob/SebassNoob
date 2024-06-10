@@ -1,12 +1,13 @@
 ### Hi there 👋
 
 
-- IRL name: Sebastian Ong (王哲轩）
-- Location: Clementi, Singapore
-- I'm a JC1 student who loves/ hates (sometimes) programming
+- IRL name: Sebastian Ong 
+- Location: Singapore
+- I'm a JC2 student struggling with life lol
 
 
-- Programming Languages: Python, Javascript, Java (+html, css)
+- Languages: TS/JS, Python and Java; English, Mandarin and Bahasa Melayu
+- Technologies: React (Vite + Rollup and NextJS); Postgres, Turso, MongoDB, Redis, Minio (+ ORMS); Flask, Express, Spring Boot; Docker, Cypress, Jest
 
 [![SebassNoob's GitHub stats](https://github-readme-stats.vercel.app/api?username=SebassNoob&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
@@ -15,13 +16,13 @@
 
 About me:
 
-- 🔭 I’m currently working on [bestFit](https://github.com/SebassNoob/bestFit), a python wrapper for best fit lines.
-- 🌱 I’m currently learning object oriented programming 🤮
-- 🤔 I’m looking for help with life
-- 📫 How to reach me: Drop me a DM on [discord](https://discord.com/channels/@me) @ sebass#9507
+- 🔭 I’m currently working on myself.
+- 🌱 I’m currently learning E2E testing and design patterns.
+- 🤔 I’m looking for help with workout routines
+- 📫 How to reach me: Drop me a DM on [discord](https://discord.com/channels/@me) @ sebassnoob
 - 😄 Pronouns: He/Him/They
-- ⚡ Fun fact: I love sci-fi shows (especially star trek), give me some recommendations!
+- ⚡ Fun fact: minecraft dungeons is one of the games of all time
 
 <hr>
 
-no motivation to update personal site lol
+no motivation to update personal site lol (its quite bad rn): https://sebassnoob.vercel.app/
