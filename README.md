@@ -1,17 +1,14 @@
 ### Hi there 👋
 
 
-- IRL name: Sebastian Ong 
+- IRL name: Sebastian 
 - Location: Singapore
 - I'm a JC2 student struggling with life lol
 
 
 - Languages: TS/JS, Python and Java; English, Mandarin and Bahasa Melayu
-- Technologies: React (Vite + Rollup and NextJS); Postgres, Turso, MongoDB, Redis, Minio (+ ORMS); Flask, Express, Spring Boot; Docker, Cypress, Jest
 
 [![SebassNoob's GitHub stats](https://github-readme-stats.vercel.app/api?username=SebassNoob&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
-
-- IRL languages: English, Mandarin Chinese, Malay (Bahasa Melayu)
 
 
 About me:
@@ -24,5 +21,3 @@ About me:
 - ⚡ Fun fact: minecraft dungeons is one of the games of all time
 
 <hr>
-
-no motivation to update personal site lol (its quite bad rn): https://sebassnoob.vercel.app/
