@@ -3,18 +3,12 @@
 
 - IRL name: Sebastian 
 - Location: Singapore
-- I'm a JC2 student struggling with life lol
-
-
+- Awaiting university...
 - Languages: TS/JS, Python and Java; English, Mandarin and Bahasa Melayu
 
-[![SebassNoob's GitHub stats](https://github-readme-stats.vercel.app/api?username=SebassNoob&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
-
-
 About me:
-
-- 🔭 I’m currently working on myself.
-- 🌱 I’m currently learning E2E testing and design patterns.
+- 🔭 I’m currently working on stuff. i cant reveal it at this time oops
+- 🌱 I’m currently learning to drive
 - 🤔 I’m looking for help with workout routines
 - 📫 How to reach me: Drop me a DM on [discord](https://discord.com/channels/@me) @ sebassnoob
 - 😄 Pronouns: He/Him/They
