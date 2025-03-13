@@ -1,4 +1,4 @@
-### Hi there 👋
+### Hello! 👋
 
 - IRL name: Sebastian 
 - Location: Singapore
@@ -6,8 +6,10 @@
 - Languages: TS/JS, Python and Java; English, Mandarin and Bahasa Melayu
 
 About me:
-- 🔭 I’m currently working on ??
-- 🌱 I’m currently learning to drive
-- 🤔 I’m looking for help with workout routines
+- 🔭 I’m currently working on (idk tbh im burnt out)
+- 🌱 I’m currently learning to drive 🚗
+- 🤔 I’m looking for help with food recommendations! :)
 - 📫 How to reach me: Drop me a DM on [discord](https://discord.com/channels/@me) @ sebassnoob
-- ⚡ Fun fact: minecraft dungeons is one of the games of all time
+- ⚡ Fun fact: old english has no silent letters. when reading u need to sound every letter out
+
+[website](https://sebassnoob.dev)
