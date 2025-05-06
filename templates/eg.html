@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
 <head>
+  <link rel="apple-touch-icon" sizes="180x180" href="static/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="static/site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="static/index.css" type="text/css">
   
@@ -15,10 +19,40 @@
     
     <div data-barba="container">
       {% include 'navbar.html' %}
+      <!--TODO: REMOVE BR TAGS -->
       <div class="container">
-        <h1>Title, description</h1>
-        <img> 
-        <a href="#">website of project</a>
+        <h1>Programming projects undertaken</h1>
+        <br>
+        <h3>Discord bot</h3>
+        <br>
+        <h6>An overview</h6>
+        <br>
+        <p1>For the uninitiated, Discord is organised into servers with a common topic (eg. gaming servers, servers where one can learn a language, servers for friends to hang out) where a user can join multiple servers. Bots can be added to servers where they perform or automante a variety of tasks, including user moderation and text based games. The particular bot I created, annoybot, has a goal of boosting interactivity withih servers by allowing server members to 'annoy' other server members in a harmless way.</p1>
+        <br>
+        <h6>Creation and operation process</h6>
+        <br>
+        <p1>Using a package called Discord.py, I could interact with discord's API through sending requests through this module. By typing commands prefixed with a '$', end users could make the bot send messages into 'channels' in a server. Some of these messages could range from insults to jokes to interactive button-based games. </p1>
+      <img alt="example of message">
+      <!--add ss later-->
+        <p1>An example of what the bot can do. (1.8.0a)</p1>
+        <br>
+        <p1>Development on this started in June 2021, where I had a month to kill. Initial progess was slow, as the package was not beginner friendly. I experimented with the features the module brought and made the core features that the bot has today. Eventually, after production release, the bot grew slowly to 100 servers. Due to discord's <s>tyranny</s> new security policy introduced in late 2020, I had to verify my bot with my personal details, in order to allow the bot to grow past 100 servers. As of June 2022, 1 year after development has begun, the bot sits in 510 servers. </p1>
+        <br>
+        <h6>Limitations and challenges</h6>
+        <br>
+        <p1>Backend limitations</p1>
+        <br>
+        <p1>Replit is designed to only run code for a maximum loop of 30 minutes while the user is offline. Once 30 minutes has elapsed, the process will automatically terminate. This affects my bot in that I have to continuously ping the server with an external application called <a href='https://uptimerobot.com'>Uptimerobot</a> which sends GET requests every 5 minutes to a linked web page on the server my bot is running on. This ensures that the page is always online and therefore the bot is, too.</p1>
+        <br>
+        <p1>Discord's ratelimits on its API</p1>
+        <br>
+        <p1>In order to prevent API abuse, Discord has automatic ratelimits on all API requests coming from a source. If too many requests are made in a short amount of time, Discord will automatically block incoming requests for a short period of time. Therefore, the only way to reduce the number of API calls per unit time is to push it to the end user as well. Every command that the end user uses will have a predetermined cooldown time in order to prevent spam and therefore prevent too many API calls being made in a short amount of time. Although this system is in place, the bot still may get ratelimited and go offline since it has to accommodate requests coming from 500 servers, which is no small feat. </p1>
+        <br>
+        <p1>Discord's 'priviliged intents'</p1>
+        <br>
+        <p1></p1>
+        
+        
 
 
 

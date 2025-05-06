@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="static/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="static/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/index.css" type="text/css">
+
+  
+  <title>About this page</title>
+  
+</head>
+<body data-barba="wrapper">
+
+    
+    
+    <div class="loader"></div>
+    
+    <div data-barba="container" >
+      
+      {% include 'navbar.html' %}
+      <h1>About this site</h1>
+      <br>
+      <p1>This page was originally created to practice my html. However, as the project progressed, I realised that there wasn't a clearly defined purpose of this page. Therefore I decided to dedicate this page to showcasing myself and my skills, transforming it into an online e-portfolio that I could show to others.</p1>
+      <br>
+      
+      
+      <h3>Technical Info</h3>
+      <br>
+      <h6>Backend systems:</h6>
+      <li style="color:white;">
+        <ul>Python with Flask ('pip install flask')</ul>
+        <ul>Hosted by <a href="https://replit.com">replit.com</a>, an online IDE offering free hosting services. </ul>
+      </li>
+      <h6>Frontend UI:</h6>
+      <br>
+      <li style="color:white;">
+        <ul>Barba.js, a lightweight page animations helper</ul>
+        <ul>jinja2, a templating engine in html (a flask dependency). Special placeholders in the template allow writing code similar to Python syntax.</ul>  
+      </li>
+      <br>
+      <p1>Testing and QA done on Safari, Chrome, and Microsoft Edge. View page speed insights on <a href='https://pagespeed.web.dev/report?url=https%3A%2F%2Fsebassnoob.repl.co%2F&form_factor=desktop'>PageSpeed</a></p1>
+      <br>
+      <p1>Source code on <a href='https://github.com/SebassNoob/SebassNoob'>Github</a></p1>
+
+      
+      <div style="margin-top:100px">
+    {% include 'footer.html' %}
+    </div>
+
+    </div>
+    
+    
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha384-SzzIsV7QsIVbpk86WEy+qc86Qg3q9L0uzQnyvd6Nrhg5EBLtJDo5Wp17FkZTboRt" crossorigin="anonymous"></script>
+    <script src="static/scripts/index.js" defer></script>
+</body>

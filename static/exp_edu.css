@@ -6,13 +6,10 @@
   box-sizing: border-box;
 }
 
+
 body{
-  background-image: linear-gradient(
-    30deg,
-    #e22400 0%,
-    #feb43f 100%
-    
-  );
+  
+  min-width:10px;
   
 
 }
@@ -104,26 +101,101 @@ body{
 
 
 
-.education-section{
-  width:70vw;
+
+
+#education-section{
+  background-image: linear-gradient(
+    30deg,
+    #e22400 0%,
+    #feb43f 100%
+    
+  );
+
+
+ 
+  height:600px;
   overflow:visible;
-  margin-left:-30px;
+  position: absolute;
+  width:300vw;
+  margin-left:-100%;
+  z-index: -3;
+  padding: 10px;
+  align-items: center;
 }
 
-.job-section{
+#job-section{
   background-image: linear-gradient(
     140deg,
     #7a219e 0%,
     #52d6fc 100%
     
   );
-  width:120vw;
+
+
+  height:600px;
   overflow:visible;
-  margin-left:-200px;
+  position: absolute;
+  width:300vw;
+  margin-left:-100%;
+  z-index: -3;
+  
+  align-items: center;
+
+  
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
+.flex-container {
+  display:flex;
+  flex-direction: column;
 }
+
+.job-card{
+  padding: 2px;
+  height: 350px;
+  width: 600px;
+
+  color: black;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding:10px;
+  margin: 30px;
+  background-color: gray;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px #ffffff;
+  background-color: transparent;
+}
+
+.job-card::after{
+  content: '';
+  background-size: cover;
+  margin-left: -2px;
+  margin-top: -2px;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  
+}
+
+#abilities-section{
+
+  background-image: linear-gradient(
+    -50deg,
+    #e63b7a 0%,
+    #7a219e 100%
+  );
+  height:600px;
+  overflow:visible;
+  position: absolute;
+  width:300vw;
+  margin-left:-100%;
+  z-index: -3;
+  padding: 10px;
+  align-items: center;
+ 
+  
+}
+
+
+
